@@ -1,4 +1,4 @@
-#teach-page #body-wrapper {
+#teach-page {
     width: 100vw;
     height: 100vh;
 }
@@ -14,15 +14,16 @@
     border: .8rem;
     margin: -3.2rem auto 3.2rem;
     padding-top: 6.4rem;
+    overflow: hidden;
 }
 
-#teach-page fieldset {
+#teach-page main fieldset {
     border: none;
 
     padding: 0 2.4rem;
 }
 
-#teach-page fieldset legend  {
+#teach-page main fieldset legend  {
     font: 700 2.4rem "Archivo", sans-serif;
 
     color: var(--color-text-title);
@@ -56,7 +57,7 @@
     color: var(--color-primary-dark);
 }
 
-#teach-page fieldset+fieldset {
+#teach-page fieldset + fieldset {
     margin-top: 6.4rem;
 }
 
@@ -79,7 +80,7 @@
     align-items: center;
     justify-content: center;
 
-    font: 1.4rem;
+    font-size: 1.5rem;
     line-height: 2.4rem;
 
     color: var(--color-text-complement);
@@ -104,8 +105,12 @@
     justify-content: center;
     text-decoration: none;
 
-    transition: .2s;
+    transition: background .2s;
     margin-top: 3.2rem;
+}
+
+#teach-page main footer button:hover {
+    background: var(--color-secondary-dark);
 }
 
 .schedule-item+.schedule-item {
@@ -115,7 +120,7 @@
 }
 
 @media (min-width: 700px) {
-    #teach-page #body-wrapper {
+    #teach-page {
         max-width: 100vw;
     }
 
@@ -128,20 +133,9 @@
 
     }
 
-    .schedule-item {
-        display: grid;
-        grid-template-columns: 2fr 1fr 1fr;
-        column-gap: 1.6rem;
-    }
-
-    #teach-page #schedule-items .select-block+.input-block,
-    #teach-page #schedule-items .input-block+.input-block {
-        margin-top: 0;
-    }
-
     #teach-page main footer {
         padding: 40px 64px;
-
+        
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -151,5 +145,16 @@
         margin-top: 0;
 
         width: 200px;
+    }
+
+    .schedule-item {
+        display: grid;
+        grid-template-columns: 2fr 1fr 1fr;
+        column-gap: 1.6rem;
+    }
+    
+    #teach-page #schedule-items .select-block+.input-block,
+    #teach-page #schedule-items .input-block+.input-block {
+        margin-top: 0;
     }
 }

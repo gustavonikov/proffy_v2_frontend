@@ -27,12 +27,15 @@
     box-sizing: border-box;
 }
 
-html, body {
+html, body, #root {
     height: 100vh;
 }
 
 body {
     background: var(--color-background);
+}
+
+#root {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -47,10 +50,11 @@ textarea {
     color: var(--color-text-base);
 }
 
-#body-wrapper{
+.wrapper {
     width: 90vw; /* o padrão que colocaram foi 90vh, se der merda, voltar p ele */
     max-width: 700px;
 }
+
 
 @media (min-width: 700px) {
     :root{
